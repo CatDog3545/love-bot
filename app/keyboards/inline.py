@@ -33,6 +33,9 @@ def get_edit_profile_keyboard(language: str = "ru") -> InlineKeyboardMarkup:
             InlineKeyboardButton(text=get_text("edit_city", language), callback_data="edit:city")
         ],
         [
+            InlineKeyboardButton(text="📷 " + get_text("manage_photos", language), callback_data="edit:photos")
+        ],
+        [
             InlineKeyboardButton(text=get_text("back", language), callback_data="back:main")
         ]
     ])
@@ -89,4 +92,19 @@ def get_match_keyboard(language: str = "ru") -> InlineKeyboardMarkup:
             InlineKeyboardButton(text=get_text("continue_browse", language), callback_data="match:continue")
         ]
     ])
-    return keyboard 
+    return keyboard
+
+def get_photo_manage_keyboard(language: str = "ru") -> InlineKeyboardMarkup:
+    """Клавиатура для управления фотографиями"""
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="📷 " + get_text("add_photo", language), callback_data="photo:add")
+        ],
+        [
+            InlineKeyboardButton(text="🖼 " + get_text("view_photos", language), callback_data="photo:view")
+        ],
+        [
+            InlineKeyboardButton(text=get_text("back", language), callback_data="back:edit")
+        ]
+    ])
+    return keyboard

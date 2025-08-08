@@ -1,12 +1,11 @@
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv, dotenv_values 
 
 # Загрузка переменных окружения
-# load_dotenv()
+load_dotenv()
 
 # Токен бота
-BOT_TOKEN = "8384828803:AAFeXfI2A5iB5HCdkSZW-leAdH--lYHIWDo"
-# BOT_TOKEN = os.getenv('BOT_TOKEN')
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Настройки базы данных
 DATABASE_URL = "sqlite:///love_bot.db"
@@ -22,4 +21,4 @@ MAX_AGE = 100
 
 # Настройки профиля
 MAX_PHOTOS = 5
-MAX_BIO_LENGTH = 500 
+MAX_BIO_LENGTH = 500
