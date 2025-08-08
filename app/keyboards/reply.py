@@ -145,6 +145,10 @@ def get_profile_view_keyboard(language: str = "ru") -> ReplyKeyboardMarkup:
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
                 [
+                    KeyboardButton(text="👍 Лайк"),
+                    KeyboardButton(text="👎 Дизлайк")
+                ],
+                [
                     KeyboardButton(text="⏭ Следующий профиль")
                 ],
                 [
@@ -159,6 +163,10 @@ def get_profile_view_keyboard(language: str = "ru") -> ReplyKeyboardMarkup:
     else:  # English
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
+                [
+                    KeyboardButton(text="👍 Like"),
+                    KeyboardButton(text="👎 Dislike")
+                ],
                 [
                     KeyboardButton(text="⏭ Next profile")
                 ],
